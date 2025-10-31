@@ -801,7 +801,7 @@ const Main = () => {
             desc: "Taskly — A modern and intuitive task management app...",
             img: "/projects/taskly.png",
             github: "https://github.com/nikgitofficial/taskly",
-            live: "https://taskly-plum.vercel.app/login",
+            live: "https://taskly-plum.vercel.app/about",
           },
           {
             title: "TeamSphere HR System",
