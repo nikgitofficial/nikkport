@@ -123,7 +123,7 @@ const Main = () => {
     {/* LEFT: Logo / Name */}
     <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
       <Avatar
-        src="/nikko1.png"
+        src="/pic1.png"
         alt="Nikko"
         sx={{
           width: 36,
@@ -155,7 +155,7 @@ const Main = () => {
       : "0 0 6px rgba(0,123,255,0.4)", // softer shadow for light mode
   }}
 >
-  App.dev
+  Nikk.dev
 </Typography>
 
     </Box>
@@ -474,7 +474,7 @@ const Main = () => {
           }}
         >
           <Avatar
-            src="/nikko.png"
+            src="/pic2.png"
             alt="Nikko"
             sx={{
               width: "100%",
