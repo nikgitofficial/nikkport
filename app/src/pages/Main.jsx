@@ -367,7 +367,7 @@ const Main = () => {
     mb: 4,
   }}
 >
-  I build modern web apps with MERN & Django
+  I build modern web apps 
 </Typography>
 
     </motion.div>
