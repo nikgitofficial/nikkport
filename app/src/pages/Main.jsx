@@ -832,11 +832,18 @@ const Main = () => {
             live: "https://fileuploader-dun.vercel.app/",
           },
           {
-            title: "Chat Application",
+            title: "Media Application",
             desc: "Niko Nikonik – A modern web app where users can log in...",
             img: "/projects/nikonikonik.png",
             github: "https://github.com/nikgitofficial/NikoNikonik",
             live: "https://niko-nikonik-rouge.vercel.app/welcome",
+          },
+          {
+            title: "Notes Application With Media",
+            desc: "Nik Notes – A modern web app where users can log in...",
+            img: "/projects/niknotes.png",
+            github: "https://github.com/nikgitofficial/niknotes",
+            live: "https://niknotes.vercel.app",
           },
         ].map((project, i) => (
           <Grid item xs={12} sm={6} md={4} key={project.title}>
