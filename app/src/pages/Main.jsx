@@ -950,6 +950,13 @@ const Main = () => {
             github: "https://github.com/nikgitofficial/niknotes",
             live: "https://niknotes.vercel.app",
           },
+          {
+            title: "NikBlog",
+            desc: "NikBlog – Personal blog showcasing reflections..",
+            img: "/projects/nikblog.png",
+            github: "https://github.com/nikgitofficial/personalblog",
+            live: "https://personalblog-ffpe.vercel.app/",
+          },
         ].map((project, i) => (
           <Grid item xs={12} sm={6} md={4} key={project.title}>
             <motion.div
