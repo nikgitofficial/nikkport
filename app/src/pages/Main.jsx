@@ -30,6 +30,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import PhoneIcon from "@mui/icons-material/Phone";
+import DescriptionIcon from "@mui/icons-material/Description";
 
 
 const sections = [
@@ -85,6 +86,11 @@ const Main = () => {
   );
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
+  // Function to open resume in new tab
+  const openResume = () => {
+    window.open("/resume.pdf", "_blank", "noopener,noreferrer");
+  };
 
   return (
     <ThemeProvider theme={theme}>
@@ -161,7 +167,7 @@ const Main = () => {
     </Box>
 
     {/* CENTER: Navigation Links (desktop) */}
-    <Box sx={{ display: { xs: "none", md: "flex" }, gap: 3 }}>
+    <Box sx={{ display: { xs: "none", md: "flex" }, gap: 3, alignItems: "center" }}>
       {sections.map((s) => (
         <Button
           key={s.id}
@@ -182,6 +188,8 @@ const Main = () => {
           {s.title}
         </Button>
       ))}
+      
+   
     </Box>
 
     {/* RIGHT: Theme Toggle + Hamburger (mobile) */}
@@ -265,6 +273,35 @@ const Main = () => {
           </ListItemButton>
         </ListItem>
       ))}
+      
+      {/* Resume Button in Mobile Drawer */}
+      <ListItem disablePadding sx={{ mt: 2, px: 1 }}>
+        <Button
+          fullWidth
+          onClick={openResume}
+          startIcon={<DescriptionIcon />}
+          sx={{
+            color: "#fff",
+            fontWeight: 600,
+            background: mode === "dark"
+              ? "linear-gradient(135deg, #00e5ff, #00bcd4)"
+              : "linear-gradient(135deg, #007aff, #00bcd4)",
+            borderRadius: 2,
+            py: 1,
+            transition: "all 0.3s ease",
+            "&:hover": {
+              background: mode === "dark"
+                ? "linear-gradient(135deg, #00ffb0, #00e5ff)"
+                : "linear-gradient(135deg, #00bcd4, #007aff)",
+              boxShadow: mode === "dark"
+                ? "0 0 15px rgba(0,229,255,0.6)"
+                : "0 0 15px rgba(0,123,255,0.5)",
+            },
+          }}
+        >
+          Resume
+        </Button>
+      </ListItem>
     </List>
   </Box>
 </Drawer>
@@ -345,7 +382,7 @@ const Main = () => {
       >
         <TypeAnimation
           sequence={[
-            "Hi, I’m Nikko ",
+            "Hi, I'm Nikko ",
             2000,
             "Web Developer ",
             2000,
@@ -373,32 +410,64 @@ const Main = () => {
     </motion.div>
 
     <motion.div variants={fadeUp}>
-      <Button
-        href="#projects"
-        variant="contained"
-        size="large"
-        sx={{
-          borderRadius: 3,
-          px: 4,
-          py: 1.2,
-          fontSize: "1rem",
-          background: mode === "dark"
-            ? "linear-gradient(90deg, #00e5ff, #00bcd4, #00ffb0)"
-            : "linear-gradient(90deg, #007aff, #00bcd4, #00ffb0)",
-          boxShadow: mode === "dark"
-            ? "0 0 20px rgba(0,229,255,0.5)"
-            : "0 0 20px rgba(0,123,255,0.4)",
-          transition: "all 0.3s ease",
-          "&:hover": {
-            transform: "scale(1.05)",
+      <Stack direction="row" spacing={2} justifyContent="center">
+        <Button
+          href="#projects"
+          variant="contained"
+          size="large"
+          sx={{
+            borderRadius: 3,
+            px: 4,
+            py: 1.2,
+            fontSize: "1rem",
+            background: mode === "dark"
+              ? "linear-gradient(90deg, #00e5ff, #00bcd4, #00ffb0)"
+              : "linear-gradient(90deg, #007aff, #00bcd4, #00ffb0)",
             boxShadow: mode === "dark"
-              ? "0 0 25px rgba(0,255,200,0.7)"
-              : "0 0 25px rgba(0,123,255,0.6)",
-          },
-        }}
-      >
-        View My Work
-      </Button>
+              ? "0 0 20px rgba(0,229,255,0.5)"
+              : "0 0 20px rgba(0,123,255,0.4)",
+            transition: "all 0.3s ease",
+            "&:hover": {
+              transform: "scale(1.05)",
+              boxShadow: mode === "dark"
+                ? "0 0 25px rgba(0,255,200,0.7)"
+                : "0 0 25px rgba(0,123,255,0.6)",
+            },
+          }}
+        >
+          View My Work
+        </Button>
+        
+        <Button
+          onClick={openResume}
+          variant="outlined"
+          size="large"
+          startIcon={<DescriptionIcon />}
+          sx={{
+            borderRadius: 3,
+            px: 4,
+            py: 1.2,
+            fontSize: "1rem",
+            color: mode === "dark" ? "#00e5ff" : "#007aff",
+            borderColor: mode === "dark" ? "#00e5ff" : "#007aff",
+            borderWidth: 2,
+            transition: "all 0.3s ease",
+            "&:hover": {
+              background: mode === "dark"
+                ? "rgba(0,229,255,0.1)"
+                : "rgba(0,122,255,0.1)",
+              borderColor: mode === "dark" ? "#00ffb0" : "#00bcd4",
+              borderWidth: 2,
+              transform: "scale(1.05)",
+              boxShadow: mode === "dark"
+                ? "0 0 20px rgba(0,229,255,0.4)"
+                : "0 0 20px rgba(0,123,255,0.3)",
+            },
+          }}
+        >
+          View Resume
+        </Button>
+      </Stack>
     </motion.div>
   </motion.div>
 </Box>
@@ -521,7 +590,7 @@ const Main = () => {
           color: mode === "dark" ? "#d0d0d0" : "#333",
         }}
       >
-        I’m a <strong>Web Developer</strong> who builds modern, responsive, and
+        I'm a <strong>Web Developer</strong> who builds modern, responsive, and
         scalable applications using the <strong>MERN stack</strong>,{" "}
         <strong>Vite</strong>, and <strong>Material-UI</strong> — with backend
         experience in <strong>Django</strong> and <strong>Python</strong>.  
@@ -1040,8 +1109,8 @@ const Main = () => {
           color: mode === "dark" ? "#e0f7fa" : "#007aff",
         }}
       >
-        I’m open to collaboration, freelance projects, and full-time roles.
-        Let’s build something awesome together.
+        I'm open to collaboration, freelance projects, and full-time roles.
+        Let's build something awesome together.
       </Typography>
     </motion.div>
 
