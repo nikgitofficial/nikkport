@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from "react";
+
 import {
   AppBar,
   Toolbar,
@@ -26,6 +27,7 @@ import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 import { motion, AnimatePresence } from "framer-motion";
+import WebIcon from '@mui/icons-material/Web';
 
 import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -411,63 +413,97 @@ const Main = () => {
 
     <motion.div variants={fadeUp}>
       <Stack direction="row" spacing={2} justifyContent="center">
-        <Button
-          href="#projects"
-          variant="contained"
-          size="large"
-          sx={{
-            borderRadius: 3,
-            px: 4,
-            py: 1.2,
-            fontSize: "1rem",
-            background: mode === "dark"
-              ? "linear-gradient(90deg, #00e5ff, #00bcd4, #00ffb0)"
-              : "linear-gradient(90deg, #007aff, #00bcd4, #00ffb0)",
-            boxShadow: mode === "dark"
-              ? "0 0 20px rgba(0,229,255,0.5)"
-              : "0 0 20px rgba(0,123,255,0.4)",
-            transition: "all 0.3s ease",
-            "&:hover": {
-              transform: "scale(1.05)",
-              boxShadow: mode === "dark"
-                ? "0 0 25px rgba(0,255,200,0.7)"
-                : "0 0 25px rgba(0,123,255,0.6)",
-            },
-          }}
-        >
-          View My Work
-        </Button>
-        
-        <Button
-          onClick={openResume}
-          variant="outlined"
-          size="large"
-          startIcon={<DescriptionIcon />}
-          sx={{
-            borderRadius: 3,
-            px: 4,
-            py: 1.2,
-            fontSize: "1rem",
-            color: mode === "dark" ? "#00e5ff" : "#007aff",
-            borderColor: mode === "dark" ? "#00e5ff" : "#007aff",
-            borderWidth: 2,
-            transition: "all 0.3s ease",
-            "&:hover": {
-              background: mode === "dark"
-                ? "rgba(0,229,255,0.1)"
-                : "rgba(0,122,255,0.1)",
-              borderColor: mode === "dark" ? "#00ffb0" : "#00bcd4",
-              borderWidth: 2,
-              transform: "scale(1.05)",
-              boxShadow: mode === "dark"
-                ? "0 0 20px rgba(0,229,255,0.4)"
-                : "0 0 20px rgba(0,123,255,0.3)",
-            },
-          }}
-        >
-          View Resume
-        </Button>
-      </Stack>
+  <Button
+    href="#projects"
+    variant="contained"
+    size="large"
+    sx={{
+      borderRadius: 3,
+      px: 4,
+      py: 1.2,
+      fontSize: "1rem",
+      background: mode === "dark"
+        ? "linear-gradient(90deg, #00e5ff, #00bcd4, #00ffb0)"
+        : "linear-gradient(90deg, #007aff, #00bcd4, #00ffb0)",
+      boxShadow: mode === "dark"
+        ? "0 0 20px rgba(0,229,255,0.5)"
+        : "0 0 20px rgba(0,123,255,0.4)",
+      transition: "all 0.3s ease",
+      "&:hover": {
+        transform: "scale(1.05)",
+        boxShadow: mode === "dark"
+          ? "0 0 25px rgba(0,255,200,0.7)"
+          : "0 0 25px rgba(0,123,255,0.6)",
+      },
+    }}
+  >
+    View My Work
+  </Button>
+
+  <Button
+    onClick={openResume}
+    variant="outlined"
+    size="large"
+    startIcon={<DescriptionIcon />}
+    sx={{
+      borderRadius: 3,
+      px: 4,
+      py: 1.2,
+      fontSize: "1rem",
+      color: mode === "dark" ? "#00e5ff" : "#007aff",
+      borderColor: mode === "dark" ? "#00e5ff" : "#007aff",
+      borderWidth: 2,
+      transition: "all 0.3s ease",
+      "&:hover": {
+        background: mode === "dark"
+          ? "rgba(0,229,255,0.1)"
+          : "rgba(0,122,255,0.1)",
+        borderColor: mode === "dark" ? "#00ffb0" : "#00bcd4",
+        borderWidth: 2,
+        transform: "scale(1.05)",
+        boxShadow: mode === "dark"
+          ? "0 0 20px rgba(0,229,255,0.4)"
+          : "0 0 20px rgba(0,123,255,0.3)",
+      },
+    }}
+  >
+    View Resume
+  </Button>
+  <Button
+  href="https://personalblog-ffpe.vercel.app/"
+  target="_blank"
+  rel="noopener noreferrer"
+  variant="outlined"
+  size="large"
+  startIcon={<WebIcon />}
+  sx={{
+    borderRadius: 3,
+    px: 4,
+    py: 1.2,
+    fontSize: "1rem",
+    color: mode === "dark" ? "#00e5ff" : "#007aff",
+    borderColor: mode === "dark" ? "#00e5ff" : "#007aff",
+    borderWidth: 2,
+    transition: "all 0.3s ease",
+    "&:hover": {
+      background: mode === "dark"
+        ? "rgba(0,229,255,0.1)"
+        : "rgba(0,122,255,0.1)",
+      borderColor: mode === "dark" ? "#00ffb0" : "#00bcd4",
+      borderWidth: 2,
+      transform: "scale(1.05)",
+      boxShadow: mode === "dark"
+        ? "0 0 20px rgba(0,229,255,0.4)"
+        : "0 0 20px rgba(0,123,255,0.3)",
+    },
+  }}
+>
+  My Personal Blog
+</Button>
+
+  
+</Stack>
+
     </motion.div>
   </motion.div>
 </Box>
