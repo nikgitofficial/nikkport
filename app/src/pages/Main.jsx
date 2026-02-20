@@ -957,6 +957,20 @@ const Main = () => {
             github: "https://github.com/nikgitofficial/personalblog",
             live: "https://personalblog-ffpe.vercel.app/",
           },
+          {
+            title: "TimeTracker",
+            desc: "TimeTrack is a modern, full-stack time tracking system.",
+            img: "/projects/timetracker.png",
+            github: "https://github.com/nikgitofficial/timetracker",
+            live: "https://timetracker-vsdw.vercel.app/",
+          },
+          {
+            title: "KPI",
+            desc: "⏱ Real-time agent transaction tracker with EOD reporting..",
+            img: "/projects/kpi.png",
+            github: "https://github.com/nikgitofficial/kpi",
+            live: "https://kpi-l59z.vercel.app/",
+          },
         ].map((project, i) => (
           <Grid item xs={12} sm={6} md={4} key={project.title}>
             <motion.div
