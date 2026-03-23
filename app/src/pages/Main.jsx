@@ -255,6 +255,7 @@ const Main = () => {
     { title: "NikBlog", desc: "Personal blog showcasing dev reflections, tutorials, and project write-ups.", img: "/projects/nikblog.png", github: "https://github.com/nikgitofficial/personalblog", live: "https://personalblog-ffpe.vercel.app/" },
     { title: "TimeTracker", desc: "Full-stack time tracking system with reports, entries, and team views.", img: "/projects/timetracker.png", github: "https://github.com/nikgitofficial/timetracker", live: "https://timetracker-vsdw.vercel.app/" },
     { title: "KPI Dashboard", desc: "Real-time agent transaction tracker with EOD reporting and analytics.", img: "/projects/kpi.png", github: "https://github.com/nikgitofficial/kpi", live: "https://kpi-l59z.vercel.app/" },
+     { title: "NikkShop", desc: "NikkShop is a full-stack multi-seller e-commerce marketplace built with...", img: "/projects/nikkshop.png", github: "https://github.com/nikgitofficial/NikkShop", live: "https://nikk-shop.vercel.app/" },
   ];
 
   return (
